@@ -1,12 +1,19 @@
+## it should be very easy to add more sorting algs, ill probably add a few new ones soon.
+## just pass "numbers" list, and make sure to update what is on screen using:
+
+#  drawBars(numbers)
+#  turtle.update()
+#  time.sleep(SPEED)
+
 import turtle
 import random
 import time
 
 bar = turtle.Turtle()
 bar.hideturtle()
-turtle.tracer(0, 0)
+turtle.tracer(0, 0) ## with speed(0) its slow
 
-NUM_BARS = 100
+NUM_BARS = 100 ## changing this also changed width of bars
 SPEED = 0.01 ## the lower the faster
 
 WIDTH = 800 / NUM_BARS
@@ -26,10 +33,10 @@ def drawBars(nums):
 	for HEIGHT in nums:
 		bar.forward(HEIGHT) ## left side of bar
 		bar.right(90)
-		bar.forward(WIDTH) ## draw top
+		bar.forward(WIDTH) ## draw top of bar
 		bar.right(90)
 		bar.forward(HEIGHT) ## go back down, right side of bar
-		bar.left(180) ## after going down, turn around for next bar
+		bar.left(180) ## after going down, 180 turn. ready for new bar to be drawn
 
 
 def bubbleSort(arr):
@@ -38,6 +45,7 @@ def bubbleSort(arr):
 			if numbers[index] > numbers[index + 1]:
 				numbers[index], numbers[index + 1] = numbers[index + 1], numbers[index]
 			
+			## draw updated bar chart
 			drawBars(numbers)
 			turtle.update()
 			time.sleep(SPEED)
