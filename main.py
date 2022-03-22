@@ -29,7 +29,7 @@ def drawBars(nums):
 	bar.goto(START_POS) ## go to start
 	bar.pendown()
 	bar.seth(90) ## point up // set-h(eading)
-
+	
 	for HEIGHT in nums:
 		bar.forward(HEIGHT) ## left side of bar
 		bar.right(90)
