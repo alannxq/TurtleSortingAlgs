@@ -35,11 +35,8 @@ def drawBars(nums):
 def bubbleSort(arr):
 	for _ in numbers:
 		for index in range(len(arr) - 1):
-			try:
-				if numbers[index] > numbers[index + 1]:
-					numbers[index], numbers[index + 1] = numbers[index + 1], numbers[index]
-			except:
-				pass
+			if numbers[index] > numbers[index + 1]:
+				numbers[index], numbers[index + 1] = numbers[index + 1], numbers[index]
 			
 			drawBars(numbers)
 			turtle.update()
