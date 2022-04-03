@@ -2,6 +2,8 @@
 ## sorting algorith visualisation
 ## completely done in turtle
 
+## it should be easy to add sorting algoriths
+
 import turtle
 import random
 import time
