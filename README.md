@@ -1,5 +1,5 @@
-# Sorting algorithm showcase
-Using turtle!
+# What is this?
+Sorting algorithms showcased using the turtle module.
 
 
 ## Image
